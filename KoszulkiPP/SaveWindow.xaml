@@ -1,0 +1,16 @@
+﻿<Window x:Class="KoszulkiPP.SaveWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KoszulkiPP"
+        mc:Ignorable="d"
+        Title="SaveWindow" Height="100" Width="600" WindowStyle="None">
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,5,4.6,4.6" TextWrapping="Wrap" Text="Zdjecie zapisane!" VerticalAlignment="Center" Height="84" Width="589" FontFamily="Powerpuff Girls" FontSize="36" TextAlignment="Center" Foreground="White"/>
+
+    </Grid>
+</Window>
