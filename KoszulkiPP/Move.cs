@@ -17,7 +17,7 @@ namespace KoszulkiPP
             string czas_zapisu = fInfo.LastWriteTimeUtc.ToString("HH_mm_ss");
             //string path = "C:\\Users\\" + UserName1 + @"\Downloads\static.png";
             string path = @"C:\temp\static.png";
-            string path2 = @"C:\temp2\koszulka_" + rozmiar + "_" + data_pliku + "_" + czas_zapisu + "_" + UserName + ".png";
+            string path2 = @"C:\temp2\koszulka_" + rozmiar + "_" + data_pliku + "_" + UserName + ".png";
 
             try
             {

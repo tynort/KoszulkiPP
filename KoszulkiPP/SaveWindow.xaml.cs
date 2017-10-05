@@ -13,6 +13,7 @@ namespace KoszulkiPP
         {
             InitializeComponent();
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            ShowInTaskbar = false;
             this.Topmost = true;
         }
     }

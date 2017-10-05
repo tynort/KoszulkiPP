@@ -7,11 +7,14 @@
         mc:Ignorable="d"
         Title="Koszulka atomówki" Height="350" Width="525" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
+        <!--<Grid.Background>
+            <ImageBrush ImageSource=""></ImageBrush>
+        </Grid.Background>-->
         <Button x:Name="button1" Content="3-4 lat" HorizontalAlignment="Left" Margin="30,118,0,0" VerticalAlignment="Top" Width="114" Height="56" Click="button1_Click" FontSize="18"/>
         <Button x:Name="button2" Content="5-6 lat" HorizontalAlignment="Left" Margin="194,118,0,0" VerticalAlignment="Top" Width="114" Height="56" Click="button2_Click" FontSize="18"/>
         <Button x:Name="button3" Content="7-8 lat" HorizontalAlignment="Left" Margin="353,118,0,0" VerticalAlignment="Top" Width="114" Height="56" Click="button3_Click" FontSize="18"/>
         <Button x:Name="button4" Content="9-11 lat" HorizontalAlignment="Left" Margin="112,233,0,0" VerticalAlignment="Top" Width="114" Height="57" Click="button4_Click" FontSize="18"/>
         <Button x:Name="button5" Content="12- 14 lat" HorizontalAlignment="Left" Margin="274,233,0,0" VerticalAlignment="Top" Width="114" Height="57" Click="button5_Click" FontSize="18"/>
-        <TextBlock x:Name="wiek" HorizontalAlignment="Left" Margin="25,21,0,0" TextWrapping="Wrap" Text="Wybierz rozmiar koszulki:" VerticalAlignment="Top" Height="46" Width="299" FontSize="22"/>
+        <TextBlock x:Name="wiek" HorizontalAlignment="Left" Margin="30,39,0,0" TextWrapping="Wrap" Text="Wybierz rozmiar koszulki:" VerticalAlignment="Top" Height="46" Width="461" FontSize="20" FontFamily="Powerpuff Girls"/>
     </Grid>
 </Window>

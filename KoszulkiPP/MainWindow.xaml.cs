@@ -2,6 +2,7 @@
 using System.Windows;
 using System.IO;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace KoszulkiPP
 {
@@ -12,12 +13,11 @@ namespace KoszulkiPP
         {
             {
                 InitializeComponent();
-                WindowState = WindowState.Minimized;
-                WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                string UserName1 = Environment.UserName;
+                MinimizedWindow();
+                string UserName = Environment.UserName;
                 string path_directory = @"C:\temp";
                 MonitorDirectory(path_directory);
-
+                ShowInTaskbar = false;
             }
         }
 
@@ -25,7 +25,7 @@ namespace KoszulkiPP
         {
 
             Move.GetSize(3);
-            WindowState = WindowState.Minimized;
+            this.Hide();
             Move.ChangeName();
 
         }
@@ -33,42 +33,46 @@ namespace KoszulkiPP
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             Move.GetSize(5);
-            WindowState = WindowState.Minimized;
+            this.Hide();
             Move.ChangeName();
         }
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             Move.GetSize(7);
-            WindowState = WindowState.Minimized;
+            this.Hide();
             Move.ChangeName();
         }
         private void button4_Click(object sender, RoutedEventArgs e)
         {
             Move.GetSize(9);
-            WindowState = WindowState.Minimized;
+            this.Hide();
             Move.ChangeName();
 
         }
         private void button5_Click(object sender, RoutedEventArgs e)
         {
             Move.GetSize(12);
-            WindowState = WindowState.Minimized;
+            this.Hide();
             Move.ChangeName();
         }
         private void ShowWindow()
         {
-            Application.Current.Dispatcher.Invoke(new Action(() =>
+            System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                WindowState = WindowState.Normal;
+                this.Show();
                 CenterWindowOnScreen();
             }));
         }
 
         private void MinimizedWindow()
         {
-            Application.Current.Dispatcher.Invoke(new Action(() =>
+            System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                WindowState = WindowState.Minimized;
+                System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+                ni.Icon = new System.Drawing.Icon(@"..\..\Resources\6.ico");
+                ni.Visible = true;
+                this.Hide();
+                WindowStartupLocation = WindowStartupLocation.CenterScreen;
             }));
         }
 
@@ -123,7 +127,7 @@ namespace KoszulkiPP
 
         private static void ShowSaveMessage()
         {
-            Application.Current.Dispatcher.Invoke((Action)delegate {
+            System.Windows.Application.Current.Dispatcher.Invoke((Action)delegate {
                 SaveWindow sw = new SaveWindow();
                 sw.Show();
                 Thread.Sleep(5000);
@@ -131,8 +135,12 @@ namespace KoszulkiPP
             });
         }
 
+
         private void CenterWindowOnScreen()
         {
+            System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+            ni.Icon = new System.Drawing.Icon(@"..\..\Resources\6.ico");
+            ni.Visible = true;
             Topmost = true;
             double screenWidth = SystemParameters.PrimaryScreenWidth;
             double screenHeight = SystemParameters.PrimaryScreenHeight;
