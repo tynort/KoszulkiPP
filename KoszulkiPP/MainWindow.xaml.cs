@@ -3,6 +3,7 @@ using System.Windows;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace KoszulkiPP
 {
@@ -18,12 +19,12 @@ namespace KoszulkiPP
                 string path_directory = @"C:\temp";
                 MonitorDirectory(path_directory);
                 ShowInTaskbar = false;
+
             }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
             Move.GetSize(3);
             this.Hide();
             Move.ChangeName();
@@ -59,6 +60,7 @@ namespace KoszulkiPP
         {
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
             {
+                Topmost = true;
                 this.Show();
                 CenterWindowOnScreen();
             }));
@@ -115,7 +117,6 @@ namespace KoszulkiPP
         {
             Console.WriteLine("Nowy plik - zmieniona nazwa: {0}", e.Name);
             ShowWindow();
-            Thread.Sleep(2000);
         }
 
         private static void FileSystemWatcher_Deleted(object sender, FileSystemEventArgs e)
@@ -132,9 +133,16 @@ namespace KoszulkiPP
                 sw.Show();
                 Thread.Sleep(5000);
                 sw.Close();
+                ShowTimer();
             });
         }
-
+        private static void ShowTimer()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke((Action)delegate {
+                Timer t = new Timer();
+                t.Show();
+            });
+        }
 
         private void CenterWindowOnScreen()
         {
@@ -149,6 +157,7 @@ namespace KoszulkiPP
             Left = (screenWidth / 2) - (windowWidth / 2);
             Top = (screenHeight / 2) - (windowHeight / 2);
         }
+
     }
 
 

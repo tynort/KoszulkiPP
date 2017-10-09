@@ -15,6 +15,7 @@ namespace KoszulkiPP
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             ShowInTaskbar = false;
             this.Topmost = true;
+
         }
     }
 }

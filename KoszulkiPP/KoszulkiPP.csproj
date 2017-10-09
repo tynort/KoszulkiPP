@@ -59,10 +59,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Background.xaml.cs">
+      <DependentUpon>Background.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Move.cs" />
     <Compile Include="SaveWindow.xaml.cs">
       <DependentUpon>SaveWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Timer.xaml.cs">
+      <DependentUpon>Timer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Background.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButtonStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,6 +90,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SaveWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Timer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,7 +134,28 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Untitled-1.png" />
+    <Resource Include="Resources\Asset 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Asset 10.png" />
+    <Resource Include="Resources\Asset 3.png" />
+    <Resource Include="Resources\Asset 4.png" />
+    <Resource Include="Resources\Asset 5.png" />
+    <Resource Include="Resources\Asset 6.png" />
+    <Resource Include="Resources\Asset 7.png" />
+    <Resource Include="Resources\Asset 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Asset 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="plain_yellow_desktop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\plain_yellow_desktop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\blue_desktop.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
