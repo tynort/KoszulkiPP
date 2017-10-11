@@ -71,7 +71,7 @@ namespace KoszulkiPP
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
             {
                 System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
-                ni.Icon = new System.Drawing.Icon(@"..\..\Resources\6.ico");
+                ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
                 ni.Visible = true;
                 this.Hide();
                 WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -147,7 +147,7 @@ namespace KoszulkiPP
         private void CenterWindowOnScreen()
         {
             System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
-            ni.Icon = new System.Drawing.Icon(@"..\..\Resources\6.ico");
+            ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
             ni.Visible = true;
             Topmost = true;
             double screenWidth = SystemParameters.PrimaryScreenWidth;
