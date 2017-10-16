@@ -10,40 +10,43 @@
         <ImageBrush ImageSource="Resources/plain_yellow_desktop.jpg" />
     </Window.Background>
     
-    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="600">
+    <Grid>
 
 
-        <Button x:Name="button1" Content="" Margin="27,262,0,0" Width="235" Height="106" Click="button1_Click" FontSize="18" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Asset 2.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button2" Content="" Margin="283,262,0,0" Width="236" Height="106" Click="button2_Click" FontSize="18" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Asset 3.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button3" Content="" Margin="541,262,0,0" Width="235" Height="106" Click="button3_Click" FontSize="18" BorderBrush="{x:Null}" Panel.ZIndex="-3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Asset 4.png"/>
-            </Button.Background>
 
-        </Button>
-        <Button x:Name="button4" Content="" HorizontalAlignment="Left" Margin="155,410,0,0" VerticalAlignment="Top" Width="235" Height="106" BorderBrush="{x:Null}" Click="button4_Click" FontSize="18">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Asset 5.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="button5" Content="" HorizontalAlignment="Left" Margin="412,410,0,0" VerticalAlignment="Top" Width="235" Height="106" BorderBrush="{x:Null}" Click="button5_Click" FontSize="18">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Asset 6.png"/>
-            </Button.Background>
-        </Button>
-        <Image Margin="673,39,28,502" Source="Resources/Asset 10.png" Stretch="Fill"/>
-        <Image Margin="10,10,558,489" Source="Resources/Asset 8.png" Stretch="Fill"/>
-        <Image Margin="72,167,61,376" Source="Resources/Asset 9.png" Stretch="Fill"/>
-        <Image Margin="10,582,663,10" Source="Resources/Asset 7.png" Stretch="Fill"/>
+        <Image Height="60" Width="100" Source="Resources/Asset 10.png" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,50,50,0" />
+        <Image HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="173" Source="Resources/Asset 8.png" Margin="50,40,0,0"/>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="Resources/Asset 7.png" Stretch="Fill" Margin="10,0,0,10" Width="127" Height="8"/>
+        <Image Margin="72,167,61,376" Source="Resources/Asset 9.png" Stretch="Fill" Width="667" Height="57"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="800" Height="600">
+            <Button x:Name="button1" Content="" Margin="27,262,0,0" Width="235" Height="106" Click="button1_Click" FontSize="18" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/Asset 2.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button2" Content="" Margin="283,262,0,0" Width="236" Height="106" Click="button2_Click" FontSize="18" BorderBrush="{x:Null}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/Asset 3.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button3" Content="" Margin="541,262,0,0" Width="235" Height="106" Click="button3_Click" FontSize="18" BorderBrush="{x:Null}" Panel.ZIndex="-3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/Asset 4.png"/>
+                </Button.Background>
 
+            </Button>
+            <Button x:Name="button4" Content="" HorizontalAlignment="Left" Margin="155,410,0,0" VerticalAlignment="Top" Width="235" Height="106" BorderBrush="{x:Null}" Click="button4_Click" FontSize="18">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/Asset 5.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="button5" Content="" HorizontalAlignment="Left" Margin="412,410,0,0" VerticalAlignment="Top" Width="235" Height="106" BorderBrush="{x:Null}" Click="button5_Click" FontSize="18">
+                <Button.Background>
+                    <ImageBrush ImageSource="Resources/Asset 6.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
     </Grid>
+    
 
 </Window>

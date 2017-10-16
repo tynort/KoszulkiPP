@@ -10,7 +10,7 @@
         <ImageBrush ImageSource="Resources/plain_yellow_desktop.jpg" />
     </Window.Background>
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Margin="0,5,4.6,4.6" TextWrapping="Wrap" Text="Projekt zapisany" VerticalAlignment="Center" Height="84" Width="589" FontFamily="Unpack" FontSize="90" TextAlignment="Center" Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Center" Style="{DynamicResource UnpackFont}" Margin="0,5,4.6,4.6" TextWrapping="Wrap" Text="Projekt zapisany" VerticalAlignment="Center" Height="84" Width="589" FontSize="90" TextAlignment="Center" Foreground="Black"/>
 
     </Grid>
 </Window>

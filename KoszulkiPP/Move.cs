@@ -5,7 +5,7 @@ namespace KoszulkiPP
 {
     public class Move : MainWindow
     {
-        public static string rozmiar = "";
+        private static string rozmiar = String.Empty;
 
         public static void ChangeName()
         {

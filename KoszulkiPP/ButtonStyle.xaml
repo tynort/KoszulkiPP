@@ -19,5 +19,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-
+    <Style x:Key="UnpackFont">
+        <Setter Property="TextElement.FontFamily" Value="/KoszulkiPP;component/Resources/#Unpack Regular"/>
+    </Style>
 </ResourceDictionary>

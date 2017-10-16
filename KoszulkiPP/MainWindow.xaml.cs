@@ -23,6 +23,7 @@ namespace KoszulkiPP
             }
         }
 
+        #region buttons
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Move.GetSize(3);
@@ -56,6 +57,8 @@ namespace KoszulkiPP
             this.Hide();
             Move.ChangeName();
         }
+#endregion
+
         private void ShowWindow()
         {
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
@@ -70,9 +73,9 @@ namespace KoszulkiPP
         {
             System.Windows.Application.Current.Dispatcher.Invoke(new Action(() =>
             {
-                System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
-                ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
-                ni.Visible = true;
+                //System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+                //ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
+                //ni.Visible = true;
                 this.Hide();
                 WindowStartupLocation = WindowStartupLocation.CenterScreen;
             }));
@@ -140,15 +143,28 @@ namespace KoszulkiPP
         {
             System.Windows.Application.Current.Dispatcher.Invoke((Action)delegate {
                 Timer t = new Timer();
-                t.Show();
+                StartProject czas = new StartProject();
+                int _time = czas.TimeToStop;
+                if(_time >0)
+                {
+                    t.Show();
+                }
+            });
+        }
+
+        public static void ShowStart()
+        {
+            System.Windows.Application.Current.Dispatcher.Invoke((Action)delegate {
+                StartProject start = new StartProject();
+                start.Show();
             });
         }
 
         private void CenterWindowOnScreen()
         {
-            System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
-            ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
-            ni.Visible = true;
+            //System.Windows.Forms.NotifyIcon ni = new System.Windows.Forms.NotifyIcon();
+            //ni.Icon = new System.Drawing.Icon(@"Resources\6.ico");
+            //ni.Visible = true;
             Topmost = true;
             double screenWidth = SystemParameters.PrimaryScreenWidth;
             double screenHeight = SystemParameters.PrimaryScreenHeight;
